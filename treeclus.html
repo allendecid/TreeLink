@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/treeclus.js"></script>
+<link rel="stylesheet" href="css/cluscss.css" />
+<body>
+
+   <div id="alinea1">    </div>
+    <div id="tree-container"></div>
+
+    
+<button id="btnSubmitm" class="button">Cluster</button>
+<button id="btnSubmitm1" class="button">Make Tree</button>
+<button id="btnSubmitm2" class="button">No Outliers</button>
+        
+    
+    <div id="tabla"> </div>
+    <div id="charto"> </div>
+    <div id="legend"></div>
+     <div id="charto2"> </div>
+      <div id="charto3"> </div>
+
+<script>
+     var cortador=0;   
+        function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+var arbol = getUrlParameter('tree'); 
+var corte = getUrlParameter('corte');
+// Specify tree file and distance cut
+/*var arbol = "tree500.tre"; 
+var corte = 0.01; */
+
+Clustree(arbol,corte);
+
+</script> 	
+</body>
+</html>
