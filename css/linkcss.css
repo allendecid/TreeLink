@@ -145,19 +145,6 @@ behavior: url(/pie/PIE.htc);
    
   }
 
-  .templink {
-    fill: none;
-    stroke: blue;
-    stroke-width: 3px;
-  }
-
-  .ghostCircle.show{
-      display:block;
-  }
-
-  .ghostCircle, .activeDrag .ghostCircle{
-       display: none;
-  }
   .molesto {
   position: absolute;
   right: 10px;
