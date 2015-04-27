@@ -1,0 +1,161 @@
+body {
+  font: 10px sans-serif;
+  margin: 50px;
+}
+.area {
+   fill: lightsteelblue;
+    stroke-width: 0;
+} 
+.grid .tick {
+	stroke: lightgrey;
+	opacity: 0.7;
+	shape-rendering: crispEdges;
+}
+.legend {
+    font-size: 12px;
+  }
+  rect {
+    stroke-width: 2;
+  } 
+.grid path {
+	stroke-width: 0;
+}
+#legend {
+    position: absolute;
+     right:25%;
+  top:70%;
+  width: 100px;
+  padding: 10px 0 0 3px;
+  cursor: pointer;
+}
+/*#charto {
+    position: absolute;
+     left:5%;
+  top:65%;
+  width: 100px;
+  padding: 10px 0 0 3px;
+  cursor: pointer;
+}*/
+
+#legend text {
+  font-weight: 600;
+  fill: #fff;
+}
+#alinea1 {
+    position: absolute;
+    top:4%;
+    right:4%;
+    text-align: center;
+    border: 1px dotted #ccc;
+}
+ 
+.axis path {
+	fill: none;
+	stroke: #bbb;
+	shape-rendering: crispEdges;
+}
+ 
+.axis text {
+	fill: #555;
+}
+ #btnSubmitm {
+  position: absolute;
+  width: 100px;
+  right:20%;
+  top:10%;
+  font-size:13px;
+}
+#btnSubmitm1 {
+  position: absolute;
+  width: 100px;
+  right:20%;
+  top:17%;
+  font-size:13px;
+}
+#btnSubmitm2 {
+  position: absolute;
+  width: 100px;
+  right:20%;
+  top:24%;
+  font-size:13px;
+}
+#tree-container {
+ position: relative;
+    border: 1px solid #707070;
+    width: 700px;    
+    height:400px;
+}
+.axis line {	
+	stroke: #e7e7e7;
+	shape-rendering: crispEdges;
+}
+ 
+.axis .axis-label {
+	font-size: 14px;
+}
+ 
+.line {
+	fill: none;
+	stroke-width: 1.5px;
+}
+ 
+.dot {
+	/* consider the stroke-with the mouse detect radius? */
+	stroke: transparent;
+	stroke-width: 10px;  
+	cursor: pointer;
+}
+ 
+.dot:hover {
+	stroke: rgba(68, 127, 255, 0.3);
+}
+
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 60px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+}
+
+.button{
+  height:35px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 0px solid;
+  box-sizing:border-box;
+  padding:10px;
+  margin-bottom:30px;
+  background:steelblue;
+  color:#FFF;
+  font-weight:bold;
+  font-size: 13px;
+  transition:background .4s;
+  cursor:pointer;
+  
+}
+tr:nth-child(even) {background: #fff}
+tr:nth-child(odd) {background: #ecf2f6}
+td:hover {
+background:#dce6ee;
+cursor: pointer;
+}
+circle.node {
+  fill: lightsteelblue;
+  stroke: #555;
+  stroke-width: 3px;
+}
+circle.leaf {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+path.hull {
+  fill: lightsteelblue;
+  fill-opacity: 0.3;
+}
+
