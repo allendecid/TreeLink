@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+    
+body { font: 11px Arial;}
+
+.module{
+  position:absolute;
+  right:50px;
+  top:15%;    
+  height:48%;
+  width:200px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:5px;
+  background:RGBA(255,255,255,1);
+    
+  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);        
+  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+  
+}
+select {
+  margin: 5px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 150px;
+  padding: 5px 5px 5px 5px;
+  font-size: 12px;
+  border: 2px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.module1{
+  position:absolute;
+  right:42%;
+  top:3%;    
+  height:300px;
+  width:200px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:5px;
+  background:RGBA(255,255,255,1);
+    
+  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);        
+  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+  
+}
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: #fff;
+}
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.form{
+  height:86%;
+  width:100%;
+  box-sizing:border-box;
+  padding:20px;
+  margin-top:10px;
+}
+
+.textbox{
+  height:25px;
+  width:100%;
+  border-radius:2px;
+  border:rgba(0,0,0,.3) 2px solid;
+  box-sizing:content-box;
+  padding:1px;
+  margin-bottom:15px; 
+}
+
+.textbox:focus{
+  outline:none;
+   border:rgba(24,149,215,1) 2px solid;
+   color:rgba(24,149,215,1);
+}
+ #btnSubmitm {
+  position: absolute;
+  width: 100px;
+  right:10%;
+  top:10%;
+  font-size:13px;
+}
+
+#barrah{
+  position:absolute;
+margin-left: auto;
+margin-right: auto;
+top: 1%;
+left: 0;
+right: 0;
+}
+#btnSubmitm1 {
+  position: absolute;
+  width: 100px;
+  right:5%;
+  top:17%;
+  font-size:13px;
+}
+#btnSubmitm2 {
+  position: absolute;
+  width: 100px;
+  right:10%;
+  top:24%;
+  font-size:13px;
+  }
+.button{
+  height:35px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 0px solid;
+  box-sizing:border-box;
+  padding:10px;
+  margin-bottom:30px;
+  background:steelblue;
+  color:#FFF;
+  font-weight:bold;
+  font-size: 13px;
+  transition:background .4s;
+  cursor:pointer;
+}
+
+td, th {
+    padding: 1px 4px;
+}
+    
+  div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 180px;
+    height: 90px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  
+	.node {
+    cursor: pointer;
+  }
+   
+  .node circle {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .node rect {
+    fill: transparent;
+
+  }
+  .node ellipse {
+    fill: transparent;
+
+  }
+  .node line {
+   // stroke-width: 2px;
+  }
+   
+  .node text {
+   // font-size:10px; 
+    font-family:sans-serif;
+  }
+   
+  .link {
+    fill: none;
+   // stroke-width: 1.5px;
+  }
+  .slice {
+   
+  }
+
+  .templink {
+    fill: none;
+    stroke-width: 3px;
+  }
+
+ 
+  .molesto {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#sidebar {
+    position: absolute;
+      left:2%;
+  top:4%;
+  width: 100px;
+}
+#legend {
+    position: absolute;
+     left:2%;
+  top:4%;
+  width: 100px;
+  padding: 10px 0 0 3px;
+  cursor: pointer;
+}
+
+#legend text {
+  font: 9px sans-serif;
+  fill: #fff;
+}
+#barra {
+  font-size:7px;
+}
+#chart {
+  font-size:9px;
+  position: absolute;
+    top:5%;
+    right:2%;
+    text-align: center;
+
+}
+#chart text {
+  font-weight: 600;
+  fill: #000;
+}
+#resumen {
+  font-size:9px;
+  position: absolute;
+    bottom:10%;
+    left:4%;
+    text-align: center;
+
+}
+#resumen text {
+  font-weight: 600;
+  fill: #fff;
+}
+
+#chart1 {
+  font-size:9px;
+  position: absolute;
+    top:85%;
+    left:20%;
+    text-align: center;
+
+}
+
+#chart1 text {
+  font-weight: 600;
+  fill: #000;
+}
+#opener {
+  position: absolute;
+  width: 100px;
+  right:2%;
+  top:7%;
+  font-size:13px;
+}
+#opener1 {
+  position: absolute;
+  width: 100px;
+  right:2%;
+  top:22.2%;
+  font-size:13px;
+}
+#opener2 {
+  position: absolute;
+  width: 100px;
+  right:2%;
+  top:30.2%;
+  font-size:13px;
+}
+#openert {
+   position: absolute;
+  width: 100px;
+  right:2%;
+  top:21%;
+  font-size:13px;
+}
+#toggler {
+   position: absolute;
+  width: 100px;
+  right:2%;
+  top:14%;
+  font-size:13px;
+}
+#saveimage {
+   position: absolute;
+  width: 100px;
+  right:2%;
+  top:28%;
+  font-size:13px;
+}
+
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+
+@media screen and (min-width: 0\0) {
+  select {
+    background: none;
+    padding: 5px;
+  }
+}
+#myform {
+    position: absolute;
+    bottom:4%;
+    left:46%;
+    text-align: center;
+    border: 1px dotted #ccc;
+}
+#alinea1 {
+    position: absolute;
+    top:4%;
+    left:4%;
+    text-align: center;
+    border: 1px dotted #ccc;
+}
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+circle.node {
+  stroke-width: 3px;
+}
+circle.leaf {
+  stroke-width: 1.5px;
+}
+path.hull {
+  fill: lightsteelblue;
+  fill-opacity: 0.3;
+}
+input.qtyplus { width:25px; height:25px;}
+input.qtyminus { width:25px; height:25px;}
+
+#tabla {
+  position: absolute;
+  top:10%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+
+
+}
+.slider-width100
+{
+    width: 500px;
+}
+
+/*tr:nth-child(even) {background: #fff}
+tr:nth-child(odd) {background: #ecf2f6}
+td:hover {
+background:#dce6ee;
+cursor: pointer;
+
+
+}*/
+</style>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/treemap.min.js"></script>
+<script src="js/topojson.v1.min.js"></script>
+<script src="js/datamaps.all.js"></script>
+
+<body>
+  
+    
+    
+        
+<div id="arbol">
+    </div>
+    <div id="arcs" style="position: relative; width: 1100px; height: 600px;"></div>
+    <div class="module1" id="hiddinx" style="visibility: visible;">
+    
+    <form id="frm2" class="form">
+      <select id="countries"><option selected="selected"> Select Key </option></select>
+      
+      <select id="countries1"><option value="6" selected="selected"> Country field </option></select>
+      <select id="countries2"><option value="6" selected="selected"> Country Format </option>
+          <option value="1">Name</option>
+  <option value="2">2 Letter code</option>
+  <option value="3">3 Letter Code</option></select>
+      <input type="button" id = "btnSubmit1" value="Start" class="button"/>
+    </form>
+  </div> 
+    <div id="barrah" style="visibility: hidden;">
+        <button id="btnSubmitm1" class="button">Back</button>
+            <p align="center"><font size="2" face="verdana">History</font><br />
+  <label for="nRadius"
+         style="display: inline-block; width: 150px; text-align: left">
+         Distance = <span id="nRadius-value"></span>
+  </label>
+  <input type="range" id="nRadius" step="1" min="0" value="0" class="slider-width100">
+  <button id="play" >&#9658;</button> 
+</p>
+  <p align="center"><font size="2" face="verdana">Population</font><br />
+  <label for="nRadius1" 
+         style="display: inline-block; width: 150px; text-align: left">
+         Distance = <span id="nRadius-value1"></span>
+  </label>
+  <input type="range" id="nRadius1" step="1" min="0" max="20" value="0" class="slider-width100">
+  <button id="play1" >&#9658;</button> 
+</p></div>
+    <div id="legend" style="cursor: pointer"></div>
+    <div id="esconde" style="visibility: visible;">  
+    <button id="btnSubmitm" class="button">Map Plot</button>
+    </div>
+    <script>
+ function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}  
+
+var arbol = getUrlParameter('tree');
+var elcsv =getUrlParameter('csv');
+makemap(arbol,elcsv);
+
+
+
+    </script>
+</body>
+</html>
