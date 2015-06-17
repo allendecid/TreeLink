@@ -5,7 +5,7 @@ Treelink is a platform-independent software for linking datasets to trees, taxon
 
 The application allows an automated integration of datasets to trees resulting in annotated visualizations displaying the distribution of selected data attributes in branches and nodes. Genomic and proteonomic sequences can also be linked to the tree and extracted from internal nodes and leafs.
 
-A novel clustering algorithm to simplify trees and display the most divergent clades was also developed. Phylogeographic inference and plotting based on maximum parsimony and ancestral reconstruction is also comprehended. File support includes the most popular formats like newick and csv. Exporting visualizations as images, cluster outputs and genomic sequences is supported.
+A novel clustering algorithm to simplify trees and display the most divergent clades was also developed. Phylogeographic inference and plotting based on maximum parsimony and maximum likelihood for ancestral reconstruction is also comprehended. File support includes the most popular formats like newick and csv. Exporting visualizations as images, cluster outputs and genomic sequences is supported.
 
 To use on a desktop, download the files and Node WebKit. Add the files to the Node WebKit project folder and run the executable.
 
