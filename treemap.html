@@ -106,17 +106,38 @@ right: 0;
 #btnSubmitm1 {
   position: absolute;
   width: 100px;
-  right:5%;
+  right:10%;
   top:17%;
   font-size:13px;
 }
 #btnSubmitm2 {
   position: absolute;
   width: 100px;
+  right:5%;
+  top:24%;
+  font-size:13px;
+  }
+#btnSubmitm3 {
+  position: absolute;
+  width: 100px;
   right:10%;
   top:24%;
   font-size:13px;
   }
+#btnSubmitm4 {
+  position: absolute;
+  width: 100px;
+  right:10%;
+  top:31%;
+  font-size:13px;
+  }
+  #btnSubmitm5 {
+  position: absolute;
+  width: 100px;
+  right:10%;
+  top:38%;
+  font-size:13px;
+  } 
 .button{
   height:35px;
   width:100%;
@@ -365,7 +386,7 @@ cursor: pointer;
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/d3.v3.min.js"></script>
 <script src="js/parser.js"></script>
-<script src="js/treemap.min.js"></script>
+<script src="js/treemap.v1.min.js"></script>
 <script src="js/topojson.v1.min.js"></script>
 <script src="js/datamaps.all.js"></script>
 
@@ -373,7 +394,7 @@ cursor: pointer;
   
     
     
-        
+
 <div id="arbol">
     </div>
     <div id="arcs" style="position: relative; width: 1100px; height: 600px;"></div>
@@ -391,7 +412,7 @@ cursor: pointer;
     </form>
   </div> 
     <div id="barrah" style="visibility: hidden;">
-        <button id="btnSubmitm1" class="button">Back</button>
+        <button id="btnSubmitm2" class="button">Back</button>
             <p align="center"><font size="2" face="verdana">History</font><br />
   <label for="nRadius"
          style="display: inline-block; width: 150px; text-align: left">
@@ -400,17 +421,21 @@ cursor: pointer;
   <input type="range" id="nRadius" step="1" min="0" value="0" class="slider-width100">
   <button id="play" >&#9658;</button> 
 </p>
-  <p align="center"><font size="2" face="verdana">Population</font><br />
+  <p align="center"><font size="2" face="verdana">Growth</font><br />
   <label for="nRadius1" 
          style="display: inline-block; width: 150px; text-align: left">
          Distance = <span id="nRadius-value1"></span>
   </label>
-  <input type="range" id="nRadius1" step="1" min="0" max="20" value="0" class="slider-width100">
+  <input type="range" id="nRadius1" step="1" min="0" max="40" value="0" class="slider-width100">
   <button id="play1" >&#9658;</button> 
 </p></div>
     <div id="legend" style="cursor: pointer"></div>
     <div id="esconde" style="visibility: visible;">  
     <button id="btnSubmitm" class="button">Map Plot</button>
+    <button id="btnSubmitm1" class="button">ML</button>
+    <button id="btnSubmitm3" class="button">Accelerated</button>
+    <button id="btnSubmitm4" class="button">Delayed</button>
+    <button id="btnSubmitm5" class="button">Skyline</button>
     </div>
     <script>
  function getUrlParameter(sParam)
@@ -428,10 +453,8 @@ cursor: pointer;
 }  
 
 var arbol = getUrlParameter('tree');
-var elcsv =getUrlParameter('csv');
+var elcsv = getUrlParameter('csv');
 makemap(arbol,elcsv);
-
-
 
     </script>
 </body>
