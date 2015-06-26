@@ -23,7 +23,7 @@ body {
 #legend {
     position: absolute;
      right:25%;
-  top:70%;
+  top:84%;
   width: 100px;
   padding: 10px 0 0 3px;
   cursor: pointer;
@@ -43,12 +43,18 @@ body {
 }
 #alinea1 {
     position: absolute;
-    top:4%;
-    right:4%;
+    top:8%;
+    right:3%;
     text-align: center;
     border: 1px dotted #ccc;
 }
- 
+#alineax {
+    position: absolute;
+    top:21%;
+    right:3%;
+    text-align: center;
+    border: 1px dotted #ccc;
+} 
 .axis path {
 	fill: none;
 	stroke: #bbb;
@@ -61,27 +67,55 @@ body {
  #btnSubmitm {
   position: absolute;
   width: 100px;
-  right:20%;
+  right:17%;
   top:10%;
   font-size:13px;
 }
 #btnSubmitm1 {
   position: absolute;
   width: 100px;
-  right:20%;
+  right:17%;
   top:17%;
   font-size:13px;
 }
 #btnSubmitm2 {
   position: absolute;
   width: 100px;
-  right:20%;
+  right:17%;
   top:24%;
+  font-size:13px;
+}
+#btnSubmitm3 {
+  position: absolute;
+  width: 100px;
+  right:17%;
+  top:31%;
+  font-size:13px;
+}
+#btnSubmitm4 {
+  position: absolute;
+  width: 100px;
+  right:17%;
+  top:38%;
+  font-size:13px;
+}
+#btnSubmitm5 {
+  position: absolute;
+  width: 100px;
+  right:17%;
+  top:45%;
+  font-size:13px;
+}
+#btnshow {
+  position: absolute;
+  width: 100px;
+  right:17%;
+  top:1%;
   font-size:13px;
 }
 #tree-container {
  position: relative;
-    border: 1px solid #707070;
+  /*  border: 1px solid #707070;*/
     width: 700px;    
     height:400px;
 }
