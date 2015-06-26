@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/fasta-parser.min.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-ui.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/treeclusplot.min.js"></script>
+<script src="js/FileSaver.min.js"></script>
+<link rel="stylesheet" href="css/linkcss.css" />
+<link rel="stylesheet" href="css/tabla.css" />
+<body>
+    <select id="classes"><option selected="selected"> Classify </option></select>
+     <div class="module1" id="hiddin1" style="visibility: hidden;">
+    
+    <form id="frm2" class="form">
+      <select id="countries"><option selected="selected"> Select Key </option></select>
+      
+      <select id="countries1"><option value="3" selected="selected"> Select Row </option></select>
+      <select id="countries2"><option value="3" selected="selected"> Select Row </option></select>
+      <select id="countries3"><option value="3" selected="selected"> Select Row </option></select>
+      <select id="countries4"><option value="3" selected="selected"> Select Row </option></select>
+      <select id="countries5"><option value="3" selected="selected"> Select Row </option></select>
+      <select id="countries6"><option value="3" selected="selected"> Select Row </option></select>
+      <select id="countries7"><option value="3" selected="selected"> Select Row </option></select>
+      <select id="countries8"><option value="3" selected="selected"> Select Row </option></select>
+      <input type="button" id = "btnSubmit1" value="Start" class="button"/>
+    </form>
+  </div>  
+   
+    <div id="alinea1">    </div>
+    <div id="tree-container"> </div>
+        <form id='myform' method='POST' action='#'>
+    <input type='button' value='Rebuild' class='qtymake'  />
+    <input type='button' value='Clean' class='qtyunmake'  />
+</form>
+         <div id="tabla" style="visibility: hidden;"> 
+      
+ </div> <button id="opener" class="button">Sequence</button>
+        <button id="toggler" class="button">Search</button>
+        <button id="openert" class="button">Table</button>
+        <button id="saveimage" class="button">Save Image</button>
+        <button id="clusterbu" class="button">Back</button>
+    <div class="module" id="hiddin" style="visibility: hidden;">
+    
+    <form id="frm1" class="form">
+      <input type="text" placeholder="Field1" class="textbox" />
+      <input type="text" placeholder="Field2" class="textbox" />
+      <input type="text" placeholder="Field3" class="textbox" />
+      <input type="text" placeholder="Field3" class="textbox" />
+      <input type="button" id = "btnSubmit" value="Search" class="button"/>
+    </form>
+  </div>
+    
+<div id="legend" style="cursor: pointer"></div>
+     <div id="dialog" title="Sequence Alignment">
+     <div id="barra">    </div>
+     <div id="alinea">    </div>
+     <div id="test" class="chart"></div>
+    </div>  
+        
+      <form class="molesto">
+  <label><input type="radio"  name="mode" value="Phyloviz" checked> Normal</label>
+  <label><input type="radio"  name="mode" value="Dendogram"> Flat</label>
+      </form>
+   
+    
+
+    <div id="chart">    </div>
+    <div id="chart1">    </div>
+    <div id="resumen"> 
+    <table id="thetable">
+    <tr>
+        <th>Summary</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table></div>
+<script>
+    
+    
+    function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+var arbol = getUrlParameter('tree');
+var corte = getUrlParameter('corte');
+var elcsv = getUrlParameter('csv');
+var elfsa = getUrlParameter('fsa');
+/*var arbol = "tree500.tre"; 
+var elcsv = "PortugueseTreated500RES.csv";
+var elfsa ="PTtreated500al.fasta" ;*/
+var virus = getUrlParameter('virus');
+
+PhyloDisplay(arbol,elcsv,elfsa,corte,virus);
+</script> 
+</body>
+</html>
+
