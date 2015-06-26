@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/d3.v3.min.js"></script>
 <script src="js/fasta-parser.min.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-ui.js"></script>
 <script src="js/parser.js"></script>
-<script src="js/treelink.min.js"></script>
+<script src="js/treelink.v1.min.js"></script>
 <script src="js/FileSaver.min.js"></script>
 <link rel="stylesheet" href="css/tabla.css" />
 <link rel="stylesheet" href="css/linkcss.css" />
 <body>
+           
+          <select id="classes"><option selected="selected"> Classify </option></select>
      <div class="module1" id="hiddin1" style="visibility: hidden;">
     
     <form id="frm2" class="form">
@@ -36,10 +38,13 @@
 </form>
          <div id="tabla" style="visibility: hidden;"> 
       
- </div> <button id="opener" class="button">Sequence</button>
+ </div> 
+    
+    <button id="opener" class="button">Sequence</button>
         <button id="toggler" class="button">Search</button>
         <button id="openert" class="button">Table</button>
         <button id="saveimage" class="button">Save Image</button>
+        <button id="clusterbu" class="button">Cluster</button>
     <div class="module" id="hiddin" style="visibility: hidden;">
     
     <form id="frm1" class="form">
@@ -82,6 +87,7 @@
         <td></td>
     </tr>
 </table></div>
+  
 <script>
     
     
@@ -98,14 +104,13 @@
         }
     }
 }
-
+/*var arbol = "tree500.tre"; 
+var elcsv = "PortugueseTreated500RES.csv";
+var elfsa ="PTtreated500al.fasta" ;*/
 var arbol = getUrlParameter('tree'); 
 var elcsv = getUrlParameter('csv');
 var elfsa = getUrlParameter('fsa');
-// Specify tree, data, and fasta files
-/*var arbol = "tree.tre"; 
-var elcsv = "dataset.csv";
-var elfsa ="alignment.fasta" ;*/
+
 PhyloDisplay(arbol,elcsv,elfsa);
 </script> 
 </body>
