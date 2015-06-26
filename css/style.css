@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+<p style="font-size:20px" >
+<p style="font-family:courier">
+body {
+	background: #eee;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Open Sans", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	height: auto !important;
+	height: 100%;
+	line-height: 1.6em;
+	min-height: 100%;
+}
+
+h2 {
+	color: rgb(34,34,34);
+	font-size: 2.2em;	
+	font-weight: 200;
+	margin: 0 0 24px 0;
+}
+
+/*BUTTON DESIGN*/
+[class*='btn-'] {
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,.15);
+	border-top: 1px solid rgba(255,255,255,.15);
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font: -webkit-small-control;
+	font-size: .7em;
+	letter-spacing: 1px;
+	line-height: 140%;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	text-transform: uppercase;
+	
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	  transition: all 0.1s linear;
+}
+
+	.btn-minimal {
+		background-color: rgb(255,255,255);
+		border-radius: 0;
+		border: 1px solid rgb( 186, 186, 186 );
+		color: rgb( 186, 186, 186 );
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+	}
+	
+		.btn-minimal:hover {
+			background-color: #4195fc;
+			border: 1px solid rgba(0,0,0,.1);
+			color: rgb(255,255,255);
+			cursor: pointer;
+			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+		}
+		
+		.btn-minimal:active {
+			box-shadow: 0 1px 1px rgba(0,0,0,0.15) inset;
+			text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+		}
+
+/*SECTION CONTAINER*/
+section#loginBox {
+	background-color: rgb(255,255,255);
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 0 4px rgba(0,0,0,0.2);
+	margin: 40px auto; /*aligns center*/
+	padding: 24px;
+	width: 500px;
+}
+
+/*FORM*/
+form.minimal label {
+	display: block;
+	margin: 6px 0;	
+}
+
+	form.minimal input[type="text"],
+	form.minimal input[type="email"],
+	form.minimal input[type="number"],
+	form.minimal input[type="search"],
+	form.minimal input[type="password"],
+	form.minimal textarea {
+		background-color: rgb(255,255,255);
+		border: 1px solid rgb( 186, 186, 186 );
+		border-radius: 2px;
+		-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+		-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+		  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+		display: block;
+		font-size: 14px;
+		margin: 6px 0 12px 0;
+		padding: 8px;	
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+		width: 90%;
+		
+		-webkit-transition: all 0.1s linear;
+		-moz-transition: all 0.1s linear;
+		-o-transition: all 0.1s linear;
+		  transition: all 0.1s linear;
+	}
+	
+	form.minimal input[type="text"]:focus,
+	form.minimal input[type="email"]:focus,
+	form.minimal input[type="number"]:focus,
+	form.minimal input[type="search"]:focus,
+	form.minimal input[type="password"]:focus,
+	form.minimal textarea:focus,
+	form.minimal select:focus { 
+		border-color: #4195fc;
+		-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #4195fc;
+		-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #4195fc;
+		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #4195fc;
+		color: rgb(0,0,0);
+	}
+	
+		form.minimal input[type="text"]:invalid:focus,
+		form.minimal input[type="email"]:invalid:focus,
+		form.minimal input[type="number"]:invalid:focus,
+		form.minimal input[type="search"]:invalid:focus,
+		form.minimal input[type="password"]:invalid:focus,
+		form.minimal textarea:invalid:focus,
+		form.minimal select:invalid:focus { 
+			border-color: rgb(248,66,66);
+			-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
+			-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
+			  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
+		}
