@@ -11,7 +11,8 @@ To use on a desktop, download the files and Node WebKit. Add the files to the No
 
 To use on a website, download the html files ending with *web.html, the js and css folder and upload them to a server. 
 
-To visualize the tree, it is necesarry to add the tag `<div id="tree-container">` inside the body of all the html files being used. 
+##Custom installation
+To visualize the tree, it is necesarry to load all the dependencies in the css and js folder and add the tag `<div id="tree-container">` inside the body of the html file being used. 
 
 Javascript functions: To load the visualization on the html file add the following functions to the webpage javascript code. 
 ```
