@@ -9,4 +9,15 @@ A novel clustering algorithm to simplify trees and display the most divergent cl
 
 To use on a desktop, download the files and Node WebKit. Add the files to the Node WebKit project folder and run the executable.
 
-To use on a website, download the html files ending with *web.html, the js and css folder and upload them to a server. Note: The libraries jquery and d3.js are required as local files.
+To use on a website, download the html files ending with *web.html, the js and css folder and upload them to a server. 
+
+To visualize the tree, it is necesarry to add the tag `<div id="tree-container">` inside the body of all the html files being used. 
+
+Javascript functions: To load the visualization on the html file add the following functions to the webpage javascript code. 
+```
+PhyloDisplay(NEWICKpath,CSVpath,FASTApath) // will load the Treelink main visualization.
+Clustree(NEWICKpath,Cut,CSVpath,FASTApath) // will load the Clustering visualization.
+Phylogen(NEWICKpath,Cut,1,CSVpath) // will load the min graph visualization.
+makemap(NEWICKpath,CSVpath) // will load the Treemap visualization. 
+```
+NEWICKpath refers to the location of the newick file, CSVpath to the location of the csv and FASTApath to the fasta file. Cut is the cutting value for the tree.
